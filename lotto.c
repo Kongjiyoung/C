@@ -5,7 +5,7 @@ int main(void) {
 	srand(time(0));
 	int nums[6];
 	int i, j;
-	for(i=0;i<6;i++){
+	/*for(i=0;i<6;i++){
 		nums[i]=rand() % 45+ 1;	
 	}
 	for(i=0;i<6;i++){
@@ -16,6 +16,14 @@ int main(void) {
 				i=0;
 				j=0;
 				}
+			}
+		}
+	}*/
+	for(i=0;i<6;i++){
+		nums[i]=rand() % 45+ 1;	
+		for(j=0;j<i;j++){
+			if(nums[i]==nums[j]){
+				nums[i]=rand() % 45+ 1;	
 			}
 		}
 	}
