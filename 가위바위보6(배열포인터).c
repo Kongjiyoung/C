@@ -1,20 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-//문자열로 바꾸기 
-//문자 받는 배열 전역변수로 선언 
-char a[8];
+
 //문자 받기 
-void getcha(){
+void getcha(char *get){
 	int i;
 	printf("rock, papper, scissors를 입력하세요 : ");
-	scanf("%s", a);
+	scanf("%s", &*get);
 }
 //문자 확인하기 
 int check(){
 	int b;
 	int i;
-	getcha();
+	char a[8]={};
+	getcha(a);
 	//문자확인  
 	while(1){		
 	 	if(a[0]=='r'||a[0]=='p'||a[0]=='s'){
@@ -42,7 +41,7 @@ int check(){
 					}
 				}
 			}
-			getcha();
+			getcha(a);
 		}
 	}
 	return b;
